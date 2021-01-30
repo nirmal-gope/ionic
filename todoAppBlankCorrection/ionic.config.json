@@ -1,0 +1,7 @@
+{
+  "name": "todoAppBlankCorrection",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

@@ -1,0 +1,16 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Gestion de Contact
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+<h1>{{title}}</h1>
+  <ion-list>
+    <ion-item *ngFor="let contact of contacts">
+      <ion-label>{{contact.name</ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>

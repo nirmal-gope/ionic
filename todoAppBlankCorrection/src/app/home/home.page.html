@@ -1,0 +1,38 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      {{ title }}
+    </ion-title>
+    <ion-buttons slot="end">
+      <span class="tasks-nb">
+        {{tasks.length}}
+      </span>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+<ion-list>
+  <ion-item-sliding *ngFor="let task of tasks">
+  <!--Mes liste de tàche-->
+  <ion-item>
+    <ion-label [class.done-state]="task.state">{{task.name}}</ion-label>
+    <ion-checkbox  [(ngModel)]="task.state"  slot="start" color="secondary"></ion-checkbox>
+  </ion-item>
+    <ion-item-options side="end">
+      <ion-item-option
+              (click)="deleteTask(task)"
+              expandable color="danger">Supprimer</ion-item-option>
+    </ion-item-options>
+  </ion-item-sliding>
+<!--Création d'une nouvelle tàache-->
+  <ion-item>
+    <ion-input
+            (ionBlur)="addTask()" [(ngModel)]="task.name"
+            type="text" placeholder="Ajouter une tàche"></ion-input>
+  </ion-item>
+</ion-list>
+  <ion-item>
+    <ion-button color="primary" slot="end">Ajouter</ion-button>
+  </ion-item>
+</ion-content>

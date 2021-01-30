@@ -1,0 +1,7 @@
+{
+  "name": "IonicContactApp",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
